@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,8 @@
 		F31898772B54E50200D892DA /* MockAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898762B54E50200D892DA /* MockAPISession.swift */; };
 		F31898912B54FD4D00D892DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898902B54FD4D00D892DA /* ViewModel.swift */; };
 		F31898792B54E62C00D892DA /* VideoControlPanelPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898782B54E62C00D892DA /* VideoControlPanelPlayer.swift */; };
+		F318987E2B54F30E00D892DA /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = F318987D2B54F30E00D892DA /* MarkdownKit */; };
+		F31898802B54F32500D892DA /* MarkdownText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318987F2B54F32500D892DA /* MarkdownText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		F31898762B54E50200D892DA /* MockAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPISession.swift; sourceTree = "<group>"; };
 		F31898902B54FD4D00D892DA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		F31898782B54E62C00D892DA /* VideoControlPanelPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlPanelPlayer.swift; sourceTree = "<group>"; };
+		F318987F2B54F32500D892DA /* MarkdownText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F318987E2B54F30E00D892DA /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				F31898782B54E62C00D892DA /* VideoControlPanelPlayer.swift */,
+				F318987F2B54F32500D892DA /* MarkdownText.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -251,6 +256,9 @@
 			dependencies = (
 			);
 			name = VideoPlayerSwiftUI;
+			packageProductDependencies = (
+				F318987D2B54F30E00D892DA /* MarkdownKit */,
+			);
 			productName = VideoPlayerSwiftUI;
 			productReference = 3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +330,9 @@
 				Base,
 			);
 			mainGroup = 3AF67A4F25A64DBD00D360A7;
+			packageReferences = (
+				F318987C2B54F30E00D892DA /* XCRemoteSwiftPackageReference "MarkdownKit" */,
+			);
 			productRefGroup = 3AF67A5925A64DBD00D360A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31898802B54F32500D892DA /* MarkdownText.swift in Sources */,
 				F318986E2B54E3CD00D892DA /* APIHelper.swift in Sources */,
 				F31898792B54E62C00D892DA /* VideoControlPanelPlayer.swift in Sources */,
 				F318986C2B54E3C700D892DA /* DataSession.swift in Sources */,
@@ -692,6 +704,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F318987C2B54F30E00D892DA /* XCRemoteSwiftPackageReference "MarkdownKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bmoliveira/MarkdownKit.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F318987D2B54F30E00D892DA /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F318987C2B54F30E00D892DA /* XCRemoteSwiftPackageReference "MarkdownKit" */;
+			productName = MarkdownKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AF67A5025A64DBD00D360A7 /* Project object */;
 }
