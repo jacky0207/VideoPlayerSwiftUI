@@ -23,6 +23,7 @@
 		F31898752B54E47200D892DA /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898742B54E47200D892DA /* APISession.swift */; };
 		F31898772B54E50200D892DA /* MockAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898762B54E50200D892DA /* MockAPISession.swift */; };
 		F31898912B54FD4D00D892DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898902B54FD4D00D892DA /* ViewModel.swift */; };
+		F31898792B54E62C00D892DA /* VideoControlPanelPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898782B54E62C00D892DA /* VideoControlPanelPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		F31898742B54E47200D892DA /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		F31898762B54E50200D892DA /* MockAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPISession.swift; sourceTree = "<group>"; };
 		F31898902B54FD4D00D892DA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F31898782B54E62C00D892DA /* VideoControlPanelPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlPanelPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		F31898602B54E29A00D892DA /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				F31898782B54E62C00D892DA /* VideoControlPanelPlayer.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F318986E2B54E3CD00D892DA /* APIHelper.swift in Sources */,
+				F31898792B54E62C00D892DA /* VideoControlPanelPlayer.swift in Sources */,
 				F318986C2B54E3C700D892DA /* DataSession.swift in Sources */,
 				F31898702B54E43200D892DA /* MockDIContainer.swift in Sources */,
 				F31898682B54E37100D892DA /* DIContainer.swift in Sources */,
