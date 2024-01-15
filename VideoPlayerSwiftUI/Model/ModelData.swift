@@ -9,7 +9,7 @@ import Combine
 import SwiftUI
 
 final class ModelData: ObservableObject {
-
+    var videos: [Video] = load("videos.json")
 }
 
 // For example:

@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.diContainer) var diContainer
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VideoPlayerView(viewModel: VideoPlayerViewModel(diContainer: diContainer))
     }
 }
 

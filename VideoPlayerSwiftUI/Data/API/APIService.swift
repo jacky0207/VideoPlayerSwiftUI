@@ -5,6 +5,8 @@
 //  Created by Jacky Lam on 2024-01-14.
 //
 
-protocol APIService {
+import Combine
 
+protocol APIService {
+    func videos() -> AnyPublisher<[Video], APIHelperError>
 }
