@@ -41,6 +41,9 @@ struct VideoPlayerList {
     }
 
     mutating func previous() {
+        if currIndex == 0 {
+            return
+        }
         currIndex -= 1
     }
 
@@ -49,6 +52,9 @@ struct VideoPlayerList {
     }
 
     mutating func next() {
+        if currIndex == videos.count - 1 {
+            return
+        }
         currIndex += 1
     }
 }
