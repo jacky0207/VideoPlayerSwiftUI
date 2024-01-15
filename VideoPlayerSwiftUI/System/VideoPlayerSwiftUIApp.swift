@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct VideoPlayerSwiftUIApp: App {
+    let diContainer = AppDIContainer()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.diContainer, diContainer)
         }
     }
 }

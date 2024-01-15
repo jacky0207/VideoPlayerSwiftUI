@@ -22,6 +22,7 @@
 		F31898732B54E46B00D892DA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898722B54E46B00D892DA /* APIService.swift */; };
 		F31898752B54E47200D892DA /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898742B54E47200D892DA /* APISession.swift */; };
 		F31898772B54E50200D892DA /* MockAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898762B54E50200D892DA /* MockAPISession.swift */; };
+		F31898912B54FD4D00D892DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31898902B54FD4D00D892DA /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		F31898722B54E46B00D892DA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F31898742B54E47200D892DA /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
 		F31898762B54E50200D892DA /* MockAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPISession.swift; sourceTree = "<group>"; };
+		F31898902B54FD4D00D892DA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		F318985F2B54E29600D892DA /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				F318988F2B54FD4600D892DA /* Base */,
 				3AF67A5D25A64DBD00D360A7 /* ContentView.swift */,
 			);
 			path = Screen;
@@ -219,6 +222,14 @@
 				F31898762B54E50200D892DA /* MockAPISession.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		F318988F2B54FD4600D892DA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F31898902B54FD4D00D892DA /* ViewModel.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 				F31898772B54E50200D892DA /* MockAPISession.swift in Sources */,
 				F31898652B54E33D00D892DA /* ModelData.swift in Sources */,
 				F31898732B54E46B00D892DA /* APIService.swift in Sources */,
+				F31898912B54FD4D00D892DA /* ViewModel.swift in Sources */,
 				F318986A2B54E3C000D892DA /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
