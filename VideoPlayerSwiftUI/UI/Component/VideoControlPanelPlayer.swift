@@ -16,7 +16,7 @@ protocol VideoControlPanelPlayerProtocol {
 }
 
 struct VideoControlPanelPlayer: View, VideoControlPanelPlayerProtocol {
-    var player: AVPlayer
+    var player: AVPlayer?
     var isPreviousEnabled: Bool
     var previousAction: () -> Void
     var isNextEnabled: Bool
@@ -26,13 +26,15 @@ struct VideoControlPanelPlayer: View, VideoControlPanelPlayerProtocol {
     @State private var size: CGSize = .zero
 
     init(
-        url: URL,
+        url: URL?,
         isPreviousEnabled: Bool,
         previousAction: @escaping () -> Void,
         isNextEnabled: Bool,
         nextAction: @escaping () -> Void
     ) {
-        self.player = AVPlayer(url: url)
+        if let url = url {
+            self.player = AVPlayer(url: url)
+        }
         self.isPreviousEnabled = isPreviousEnabled
         self.previousAction = previousAction
         self.isNextEnabled = isNextEnabled
@@ -66,7 +68,7 @@ struct VideoControlPanelPlayer: View, VideoControlPanelPlayerProtocol {
         if isPlaying {
             return
         }
-        player.play()
+        player?.play()
         isPlaying.toggle()
     }
 
@@ -74,7 +76,7 @@ struct VideoControlPanelPlayer: View, VideoControlPanelPlayerProtocol {
         if !isPlaying {
             return
         }
-        player.pause()
+        player?.pause()
         isPlaying.toggle()
     }
 
@@ -169,7 +171,7 @@ struct VideoControlPanelPlayer_Preview: PreviewProvider {
     static var previews: some View {
         Group {
             VideoControlPanelPlayer(
-                url: URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/full/720.mp4")!,
+                url: URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/full/720.mp4"),
                 isPreviousEnabled: true,
                 previousAction: {},
                 isNextEnabled: true,
@@ -179,7 +181,18 @@ struct VideoControlPanelPlayer_Preview: PreviewProvider {
             .previewLayout(.sizeThatFits)
 
             VideoControlPanelPlayer(
-                url: URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/full/720.mp4")!,
+                url: URL(string: ""),
+                isPreviousEnabled: true,
+                previousAction: {},
+                isNextEnabled: true,
+                nextAction: {}
+            )
+            .frame(height: 300)
+            .previewLayout(.sizeThatFits)
+            .previewDisplayName("Nil URL")
+
+            VideoControlPanelPlayer(
+                url: URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/full/720.mp4"),
                 isPreviousEnabled: false,
                 previousAction: {},
                 isNextEnabled: true,
@@ -190,7 +203,7 @@ struct VideoControlPanelPlayer_Preview: PreviewProvider {
             .previewDisplayName("Head")
 
             VideoControlPanelPlayer(
-                url: URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/full/720.mp4")!,
+                url: URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/full/720.mp4"),
                 isPreviousEnabled: true,
                 previousAction: {},
                 isNextEnabled: false,
